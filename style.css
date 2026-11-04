@@ -1,0 +1,1144 @@
+/* 
+   SIFAT ALI - PERSONAL PORTFOLIO
+   Font: Poppins, Roboto, Fira Code */
+
+
+/* 1. ROOT VARIABLES */
+
+:root {
+
+    color-scheme: light;
+
+    /* Colors */
+
+    --bg: #000000;
+
+    --surface: #151515;
+
+    --fg: #f5f5f5;
+
+    --muted: #b8b8b8;
+
+    --line: #333333;
+
+    --accent: #a78bfa;
+
+    --accent-text: #c4b5fd;
+
+    --accent-ink: #171026;
+
+    --green: #5eead4;
+
+
+    /* New Font Styles */
+
+    --font-display: "Poppins", sans-serif;
+
+    --font-body: "Roboto", sans-serif;
+
+    --font-mono: "Fira Code", monospace;
+
+}
+
+
+/*  3. BASIC SETTINGS */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 76px;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--bg);
+
+    color: var(--fg);
+
+    font-family: var(--font-body);
+
+    font-size: 16px;
+
+    line-height: 1.65;
+
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+
+}
+
+
+a {
+
+    color: inherit;
+
+}
+
+
+:focus-visible {
+
+    outline: 2px solid var(--accent);
+
+    outline-offset: 3px;
+
+    border-radius: 4px;
+
+}
+
+
+.wrap {
+
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+}
+
+
+/*  4. HEADER */
+
+.top {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 9;
+
+    background: var(--bg);
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+.top .wrap {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    padding-block: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* Logo */
+
+.mark {
+
+    font-family: var(--font-display);
+
+    font-weight: 800;
+
+    font-size: 1.3rem;
+
+    text-decoration: none;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+.mark span {
+
+    color: var(--accent);
+
+}
+
+
+/* Navigation */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px 18px;
+
+    flex-wrap: wrap;
+
+    font-family: var(--font-mono);
+
+    font-size: 0.82rem;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: var(--muted);
+
+    padding: 4px 0;
+
+    border-bottom: 2px solid transparent;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: var(--fg);
+
+    border-bottom-color: var(--accent);
+
+}
+
+
+/* Theme Button */
+
+.theme-btn {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.78rem;
+
+    color: var(--fg);
+
+    background: transparent;
+
+    border: 1px solid var(--line);
+
+    border-radius: 6px;
+
+    padding: 6px 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.theme-btn:hover {
+
+    border-color: var(--accent);
+
+    color: var(--accent-text);
+
+}
+
+
+/* 5. HERO SECTION*/
+
+.hero {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+
+    gap: 48px;
+
+    align-items: center;
+
+    padding-block: 72px 80px;
+
+}
+
+
+/* Subtitle */
+
+.eyebrow {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.82rem;
+
+    color: var(--green);
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+
+    margin: 0 0 18px;
+
+}
+
+
+/* Main Heading */
+
+h1 {
+
+    font-family: var(--font-display);
+
+    font-weight: 800;
+
+    font-size: clamp(2.6rem, 7vw, 5rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    margin: 0 0 24px;
+
+    text-wrap: balance;
+
+}
+
+
+h1 .dot {
+
+    color: var(--accent);
+
+}
+
+
+/* Description */
+
+.lead {
+
+    font-size: 1.12rem;
+
+    color: var(--muted);
+
+    max-width: 52ch;
+
+    margin: 0 0 32px;
+
+}
+
+
+.lead strong {
+
+    color: var(--fg);
+
+    font-weight: 600;
+
+}
+
+
+/* Buttons */
+
+.cta {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    font-family: var(--font-body);
+
+    font-weight: 600;
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--fg);
+
+    transition: 0.3s;
+
+}
+
+
+.btn.primary {
+
+    background: var(--accent);
+
+    color: var(--accent-ink);
+
+    border-color: var(--accent);
+
+}
+
+
+.btn.primary:hover {
+
+    filter: brightness(1.08);
+
+    transform: translateY(-3px);
+
+}
+
+
+.btn.ghost {
+
+    background: transparent;
+
+    color: var(--fg);
+
+}
+
+
+.btn.ghost:hover {
+
+    background: var(--surface);
+
+    transform: translateY(-3px);
+
+}
+
+
+/*6. PROFILE PICTURE */
+
+.hero-side {
+
+    display: grid;
+
+    gap: 28px;
+
+    min-width: 0;
+
+}
+
+
+.photo {
+
+    margin: 0 12px 12px 0;
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 340px;
+
+}
+
+
+.photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px -12px -12px 12px;
+
+    background: var(--accent);
+
+    opacity: 0.22;
+
+    border-radius: 14px;
+
+}
+
+
+.photo img {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 10 / 11;
+
+    object-fit: cover;
+
+    object-position: center 18%;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--line);
+
+    background: var(--surface);
+
+}
+
+
+/* 7. ALL SECTIONS */
+
+section {
+
+    padding-block: 72px;
+
+    border-top: 1px solid var(--line);
+
+}
+
+
+.sec-head {
+
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 36px;
+
+}
+
+
+h2 {
+
+    font-family: var(--font-display);
+
+    font-weight: 700;
+
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+
+    letter-spacing: -1px;
+
+    line-height: 1.2;
+
+    margin: 0;
+
+    text-wrap: balance;
+
+}
+
+
+.sec-tag {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+
+    color: var(--muted);
+
+}
+
+
+/*8. ABOUT SECTION */
+
+.about {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+
+    gap: 48px;
+
+}
+
+
+.about p {
+
+    margin: 0 0 16px;
+
+    max-width: 62ch;
+
+}
+
+
+/* Personal Information */
+
+.facts {
+
+    margin: 0;
+
+    display: grid;
+
+    gap: 0;
+
+    align-content: start;
+
+}
+
+
+.facts div {
+
+    display: grid;
+
+    grid-template-columns: 110px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+.facts div:first-child {
+
+    border-top: 1px solid var(--line);
+
+}
+
+
+.facts dt {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.78rem;
+
+    color: var(--muted);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+    padding-top: 3px;
+
+}
+
+
+.facts dd {
+
+    margin: 0;
+
+    font-weight: 500;
+
+}
+
+
+/*9. SKILLS SECTION*/
+
+.skills {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 0 48px;
+
+}
+
+
+.skill-group {
+
+    padding-block: 22px;
+
+    border-top: 1px solid var(--line);
+
+    min-width: 0;
+
+}
+
+
+.skill-group h3 {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: var(--green);
+
+    margin: 0 0 14px;
+
+}
+
+
+/* Skill Tags */
+
+.chips {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+.chips li {
+
+    font-family: var(--line);
+
+    font-size: 0.86rem;
+
+    padding: 5px 12px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 999px;
+
+    background: var(--surface);
+
+}
+
+.chips.lang li {
+
+    font-weight: 500;
+
+    border-color: var(--green);
+
+}
+
+/* 10. PROJECTS SECTION */
+
+.projects {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+}
+
+
+.proj {
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+    box-shadow: none;
+
+    border-radius: 10px;
+
+    padding: 26px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    min-width: 0;
+
+    transition: 0.3s;
+
+}
+
+
+.proj:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.proj-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    align-items: baseline;
+
+    flex-wrap: wrap;
+
+}
+
+
+.proj .kind {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.76rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: var(--accent-text);
+
+}
+
+
+.proj h3 {
+
+    font-family: var(--font-display);
+
+    font-weight: 700;
+
+    font-size: 1.35rem;
+
+    letter-spacing: -0.5px;
+
+    line-height: 1.3;
+
+    margin: 0;
+
+}
+
+
+.proj p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.97rem;
+
+}
+
+
+.proj .chips {
+
+    margin-top: auto;
+
+    padding-top: 6px;
+
+}
+
+
+.proj .chips li {
+
+    background: var(--bg);
+
+    font-size: 0.78rem;
+
+    padding: 3px 10px;
+
+}
+
+/* 
+   11. INTERESTS SECTION
+ */
+
+.interests {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 0 32px;
+
+}
+
+
+.interest {
+
+    padding-block: 20px;
+
+    border-top: 1px solid var(--line);
+
+}
+
+
+.interest h3 {
+
+    font-family: var(--font-display);
+
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    margin: 0 0 6px;
+
+    letter-spacing: -0.3px;
+
+}
+
+
+.interest p {
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* 12. CONTACT SECTION*/
+
+.contact {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+
+    gap: 48px;
+
+    align-items: start;
+
+}
+
+
+.contact .big {
+
+    font-family: var(--font-display);
+
+    font-weight: 700;
+
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+
+    margin: 0 0 16px;
+
+    text-wrap: balance;
+
+}
+
+
+.contact p {
+
+    color: var(--muted);
+
+    max-width: 46ch;
+
+    margin: 0;
+
+}
+
+
+.mail-cta {
+
+    margin-top: 24px;
+
+}
+
+
+/* Contact Links */
+
+.links {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.links li {
+
+    display: grid;
+
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+.links li:first-child {
+
+    border-top: 1px solid var(--line);
+
+}
+
+.links .lbl {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.78rem;
+
+    color: var(--muted);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+}
+
+.links .val {
+
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+
+}
+
+.links .val a {
+
+    text-decoration: underline;
+
+    text-decoration-color: var(--accent);
+
+    text-underline-offset: 4px;
+
+}
+
+/* Copy Button */
+
+.copy {
+
+    font-family: var(--font-mono);
+
+    font-size: 0.76rem;
+
+    color: var(--fg);
+
+    background: transparent;
+
+    border: 1px solid var(--line);
+
+    border-radius: 6px;
+
+    padding: 4px 10px;
+
+    cursor: pointer;
+
+}
+
+.copy:hover {
+
+    border-color: var(--accent);
+}
+
+footer {
+
+    border-top: 1px solid var(--line);
+
+    padding-block: 28px 36px;
+
+    font-family: var(--font-mono);
+
+    font-size: 0.8rem;
+
+    color: var(--muted);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+@media (max-width: 820px) {
+
+
+    .hero,
+    .about,
+    .contact {
+
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 36px;
+
+    }
+
+    .hero {
+
+        padding-block: 48px 56px;
+
+    }
+
+    .photo {
+
+        max-width: 300px;
+
+    }
+
+    .skills,
+    .projects,
+    .interests {
+
+        grid-template-columns: minmax(0, 1fr);
+
+    }
+
+    .interests {
+
+        gap: 0;
+
+    }
+
+    section {
+
+        padding-block: 52px;
+
+    }
+
+    .links li {
+
+        grid-template-columns: 76px minmax(0, 1fr) auto;
+    }
+}
+
+/* 15. MOBILE RESPONSIVE DESIGN*/
+
+@media (max-width: 480px) {
+    nav {
+
+        gap: 2px 14px;
+
+        font-size: 0.78rem;
+
+    }
+
+    .facts div {
+
+        grid-template-columns: 90px minmax(0, 1fr);
+
+    }
+
+    .hero {
+
+        padding-block: 40px;
+
+    }
+
+    .proj {
+
+        padding: 20px;
+
+    }
+}
+
+
+/* 16. REDUCED MOTION*/
+@media (prefers-reduced-motion: reduce) {
+    html {
+
+        scroll-behavior: auto;
+    }
+
+    * {
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
